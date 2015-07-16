@@ -19,11 +19,11 @@
 #    uiTest:       Simple driver program for the drawing interface
 ###############################################################
 pong : pong.o uiInteract.o uiDraw.o point.o
-	g++ -o pong pong.o uiInteract.o uiDraw.o point.o -lglut -lGLU
+	g++ -o pong pong.o uiInteract.o uiDraw.o point.o -L/System/Library/Frameworks -framework GLUT -L/System/Library/Frameworks -framework OpenGL
 	tar -cf pong.tar *.cpp *.h makefile
 
 uiTest : uiTest.o uiDraw.o uiInteract.o point.o
-	g++ -o uiTest uiTest.o uiDraw.o uiInteract.o point.o -lglut -lGLU
+	g++ -o uiTest uiTest.o uiDraw.o uiInteract.o point.o -L/System/Library/Frameworks -framework GLUT -L/System/Library/Frameworks -framework OpenGL
 
 ###############################################################
 # Individual files
