@@ -18,9 +18,9 @@
 #    pong:         The playable game
 #    uiTest:       Simple driver program for the drawing interface
 ###############################################################
-pong : pong.o uiInteract.o uiDraw.o point.o
-	g++ -o pong pong.o uiInteract.o uiDraw.o point.o -L/System/Library/Frameworks -framework GLUT -L/System/Library/Frameworks -framework OpenGL
-	tar -cf pong.tar *.cpp *.h makefile
+a.out : pong.o uiInteract.o uiDraw.o point.o
+	g++ -o a.out pong.o uiInteract.o uiDraw.o point.o -L/System/Library/Frameworks -framework GLUT -L/System/Library/Frameworks -framework OpenGL
+	tar -cf prj4.tar *.cpp *.h makefile
 
 uiTest : uiTest.o uiDraw.o uiInteract.o point.o
 	g++ -o uiTest uiTest.o uiDraw.o uiInteract.o point.o -L/System/Library/Frameworks -framework GLUT -L/System/Library/Frameworks -framework OpenGL
@@ -53,7 +53,7 @@ pong.o : pong.cpp uiDraw.h uiInteract.h point.h
 # General rules
 ###############################################################
 clean :
-	rm uiTest pong *.o *.tar
+	rm a.out *.o *.tar
 
-all :  uiTest pong
+all :  uiTest pong a.out
 
