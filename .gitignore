@@ -1,3 +1,7 @@
+#General
+*.xml
+*.tar 
+
 # Compiled Object files
 *.slo
 *.lo
@@ -31,3 +35,7 @@
 *.vcxproj
 *.vcxproj.filters
 *.cd
+
+#Mac Netbeans
+*.properties
+*.log
